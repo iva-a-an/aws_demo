@@ -5,6 +5,13 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "tf-demo-concrete-gull" ## TODO : See intit statte for the reference
+    key            = "terraform/dev.project_demo.tfstate"
+    region         = "us-east-1"
+  }
+
 }
 
 provider "random" {}
@@ -13,3 +20,5 @@ provider "random" {}
 provider "aws" {
   region = "us-east-1" ## TODO : Change the region to be Global variable
 }
+
+
