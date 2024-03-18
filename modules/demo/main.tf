@@ -53,13 +53,6 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 
-resource "aws_network_interface" "demo" {
-  subnet_id   = aws_subnet.subnet_demo.id
-  private_ips = ["172.16.10.100"]
-  security_groups = [aws_security_group.allow_ssh.id]
-  tags = var.tags
-}
-
 resource "aws_eip" "demo" {
     instance = aws_instance.demo.id
     domain = "vpc"
@@ -70,10 +63,6 @@ resource "aws_instance" "demo" {
   instance_type = "t3.micro"
   associate_public_ip_address = true
   security_groups = [ aws_security_group.allow_ssh.name ]
-#   network_interface {
-#     network_interface_id = aws_network_interface.demo.id
-#     device_index = 0
-#   }
 
 
   user_data = <<-EOF
@@ -88,5 +77,3 @@ chown ubuntu:ubuntu $authorized_keys_file
 
   tags = var.tags
 }
-
-

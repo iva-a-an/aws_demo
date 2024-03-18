@@ -1,5 +1,5 @@
-module "ec2" {
-  source = "../../../modules/ec2"
+module "demo" {
+  source = "../../../modules/demo"
   env = var.env
   tags = var.tags
   ip_whitelist = var.ip_whitelist
