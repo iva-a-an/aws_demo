@@ -1,7 +1,7 @@
 # aws_demo
 
 ## Solution comments
-- So solution may look overcomplecated for the task, but it was made with intention to show some best practicies.
+- The solution may look overcomplecated for the task, but it was made with intention to show some best practicies.
 - The cost of the infrastructure and optimal region is not condidered due to time limitations.
 - IAM policies are not fine tuned. 
 
@@ -52,6 +52,8 @@ i.e. attempting to fetch the data from this instance will be blocked
 
 
 ## Improvements todo 
-[] - lock terraform version
-[] - review access policy for s3 (https://developer.hashicorp.com/terraform/language/settings/backends/s3)
-[x] - enable log traces for Lambda fuction (CloudWatch?)
+- [] lock terraform version   
+- [] review access policy for s3 (https://developer.hashicorp.com/terraform/language/settings/backends/s3)      
+- [x] enable log traces for Lambda fuction (CloudWatch?)
+- [] Generate Ansible Inventory   
+- [] Install awscli via Ansible
