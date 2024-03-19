@@ -38,4 +38,4 @@ terraform.rc
 
 ### Python ###
 *.venv/
-*/app/package/
+app/package/
