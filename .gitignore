@@ -37,9 +37,5 @@ terraform.rc
 
 
 ### Python ###
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
 *.venv/
 */app/package/
